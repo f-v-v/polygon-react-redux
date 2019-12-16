@@ -1,0 +1,29 @@
+import React from 'react';
+import {Record, Details} from '../item-details';
+import Card3d from '../card-3d';
+
+import  './card-item.css'
+
+const  CardItem = ({item}) => {
+    const front = (
+        <img src={item.img} alt={item.name}/>
+    );
+    const back = (
+        <Details name={item.name} 
+                item = {item}
+        >
+            <Record field="gender" label="Gender: "/>
+            <Record field="birthYear" label="birth Year: "/>
+            <Record field="height" label="Height: "/>
+            <Record field="mass" label="Mass: "/>
+            
+        </Details>
+    );
+    return (
+        <div className="card-item">
+            <Card3d front={front} back={back} />
+        </div>
+    );
+}
+
+export default CardItem;

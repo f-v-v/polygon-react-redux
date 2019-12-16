@@ -1,0 +1,6 @@
+.item-list {
+    list-style: none;
+  }
+.selected {
+    border-color: whitesmoke;
+}
