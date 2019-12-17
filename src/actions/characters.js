@@ -30,7 +30,6 @@ const setCurrentPage = (page) => {
 };
 
 export const setServerSearch = (serverSearch) => {
-    // console.log(`setServerSearch setServerSearch=${serverSearch}`)
     return {
         type: SET_SERVER_SEARCH_CHARACTERS,
         payload: serverSearch
@@ -40,7 +39,6 @@ export const setServerSearch = (serverSearch) => {
 export const getAllCharacters = (page=1) => (dispatch, getState) => {
     dispatch(allCharactersRequested());
     const search = getState().charactersPage.serverSearch
-    // console.log(`from getAllCharacters =${search}`)
     return api.fetchSearchCharacter(search, page, false).then ( (data) =>{
         dispatch(allCharactersLoaded(data));
         dispatch(setCurrentPage(page))

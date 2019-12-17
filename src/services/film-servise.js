@@ -45,7 +45,6 @@ export default class filmsApi extends baseSWApiService {
     }
 
     fetchAllFilms = async (page = 1, short = true) => {
-        // debugger;
         let url = this._subApiUrl;
         if (page > 1) {
             url+=`?page=${page}`;

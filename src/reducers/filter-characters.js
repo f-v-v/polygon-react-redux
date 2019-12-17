@@ -4,7 +4,6 @@ const initialState = {
 }
 
 const filterCharacters = (state = initialState, action ) =>{
-    // debugger;
     switch (action.type) {
         case 'SET_SORT_BY_CHARACTERS':
             return {

@@ -18,18 +18,8 @@ class CharactersPage extends Component {
     
     // 2. Возможно ли(по практикам) сделать запрос на получение данных в shouldComponentUpdate???
     componentDidMount = () => {
-        // this.props.getAllCharacters(this.props.page);
         this.props.getAllCharacters();
     }
-    
-    // componentDidUpdate= (prevProps, prevState, snapshot) => {
-    //     console.log(`FromDidUpdate prevProps.Page=${prevProps.page}`);
-    //     console.log(`FromDidUpdate current=${this.props.page}`);
-    //     if (prevProps.page !== this.props.page) {
-    //         this.props.getAllCharacters(this.props.page);
-    //     }
-    // }
-
     // С shouldComponentUpdate перестает работать Spiner!!!
 
     // shouldComponentUpdate(nextProps, nextState) {
@@ -39,7 +29,6 @@ class CharactersPage extends Component {
     //         return  false;
     //     };
     //     return true;
-
     // }
 
     render() {

@@ -23,7 +23,6 @@ const initialState = {
 }
 
 const filmsPage = (state = initialState, action ) =>{
-    // debugger;
     switch (action.type) {
         case 'FETCH_ALL_FILMS_REQUEST':
             return {
@@ -82,7 +81,6 @@ const filmsPage = (state = initialState, action ) =>{
                 },
             };
         case 'FETCH_RELATION_PLANETS_SUCCESS':
-            // debugger
             return {
                 ...state,
                 relationPlanet:{

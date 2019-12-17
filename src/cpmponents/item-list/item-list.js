@@ -4,7 +4,6 @@ import './item-list.css';
 const ItemList = ({items, currentIndex, changeCurrentItem, setCurrentItem,
                 children: renderLabel}) => {
     
-    // debugger;
     const viewItems = items.map((item, index) => {
         let classActive = '';
         if (currentIndex === index) {classActive = ' active'}

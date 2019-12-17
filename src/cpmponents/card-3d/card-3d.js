@@ -2,7 +2,6 @@ import React from 'react';
 import './card-3d.css';
 
 const Card3d = ({ front, back }) => {
-    // console.log(`front=${front}, back=${back}`)
     return (
        
             <div className="card3d">

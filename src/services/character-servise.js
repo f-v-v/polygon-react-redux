@@ -67,9 +67,6 @@ export default class charactersApi extends baseSWApiService {
         return `${this._imageBase}${this._subImgUrl}${id}.jpg`;
     }
 
-    // fetchCharactersByArrayId = (array) =>{
-    //     return Promise.all(array.map(e => this.fetchCharacterById(e)));
-    // }
     fetchCharactersByArrayId = async (array, short=true) =>{
         const result = await Promise.all(array.map(e => this.fetchCharacterById(e, short)));
         return result;

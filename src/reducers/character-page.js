@@ -8,20 +8,7 @@ const initialState = {
     isError: null,
 }
 
-// const changeCurrentPage = ({state, change}) => {
-//     const {currentPage} = state;
-//     const countPage=Math.ceil(state.total/10);
-//     if ((currentPage === 1 && change ===-1) || (countPage === countPage && change === 1)) {
-//         return {...state};
-//     }
-//     return {
-//         ...state,
-//         currentPage: currentPage + change
-//     }
-// }
-
 const charactersPage = (state = initialState, action ) =>{
-    // debugger;
     switch (action.type) {
         case 'FETCH_ALL_CHARACTERS_REQUEST':
             return {
@@ -55,8 +42,6 @@ const charactersPage = (state = initialState, action ) =>{
                 ...state,
                 currentPage: action.payload,
             };
-        // case 'CHANGE_CURRENT_PAGE_CHARACTERS':
-        //     return changeCurrentPage(state, action.payload)
         default :
             return state;
     }

@@ -12,7 +12,6 @@ const initialState = {
 }
 
 const planetsPage = (state = initialState, action ) =>{
-    // debugger;
     switch (action.type) {
         case 'FETCH_ALL_PLANETS_REQUEST':
             return {

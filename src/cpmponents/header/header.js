@@ -7,13 +7,16 @@ const Header = () => {
         <header className="header" >
             <ul className="d-flex justify-content-center">
                 <li>
+                    <Link to="/">HOME</Link> 
+                </li>
+                <li>
                     <Link to="/films">FILMS</Link> 
                 </li>
                 <li>
                     <Link to="/characters/">PEOPLE</Link>     
                 </li>
                 <li>
-                    <Link to="/starships/1">STARSHIPS</Link>     
+                    <Link to="/starships/1/">STARSHIPS</Link>     
                 </li>
                 <li>
                     <Link to="/planets">PLANETS</Link>     

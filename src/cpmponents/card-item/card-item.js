@@ -18,10 +18,6 @@ const  CardItem = ({item, mapFields}) => {
         <Details name={item.name} 
                 item = {item}
         >
-            {/* <Record field="gender" label="Gender: "/>
-            <Record field="birthYear" label="birth Year: "/>
-            <Record field="height" label="Height: "/>
-            <Record field="mass" label="Mass: "/> */}
             {fields}
         </Details>
     );

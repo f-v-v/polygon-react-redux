@@ -23,16 +23,7 @@ const  Pagination = ({total, currentPage, getData}) => {
                     prev
             </button>
         ); 
-        next = (
-            <button 
-            type="button"
-            onClick={nextClick}
-            className="btn btn-outline-secondary">
-                    next
-            </button>
-        ); 
-        
-    } else if (currentPage===count) {
+    } else {
         prev = (
             <button 
             type="button"
@@ -41,6 +32,8 @@ const  Pagination = ({total, currentPage, getData}) => {
                     prev
             </button>
         ); 
+    }
+    if (currentPage === count) {
         next = (
             <button 
             type="button"
@@ -49,15 +42,7 @@ const  Pagination = ({total, currentPage, getData}) => {
                     next
             </button>
          );
-        } else {
-            prev = (
-                <button 
-                type="button"
-                onClick={prevClick}
-                className="btn btn-outline-secondary">
-                    prev
-            </button>
-        ); 
+    } else {
         next = (
             <button 
             type="button"
@@ -65,11 +50,11 @@ const  Pagination = ({total, currentPage, getData}) => {
             className="btn btn-outline-secondary">
                     next
             </button>
-        );
+        );    
     }
     
     const arrButtons = Array.from({ length: count }, (v, i) => i+1);
-    const pageButtons = arrButtons.map((item, index) => {
+    const pageButtons = arrButtons.map((item) => {
     const isActive = +item === +currentPage;
         const classNames = 'btn ' + (isActive ? 'btn-info' : 'btn-outline-secondary'); 
         return (

@@ -9,11 +9,6 @@ const CharacterInnerSearchPanel = (props) => {
     const {innerSearch, setInnerSearch} = props;
 
     return (
-            // <SearchPanel search={innerSearch}
-            //         onChangeSearch={setInnerSearch}
-            //         title="На странице"
-            //         idForm="inner"
-            // />
         <div className="input-group">
             <div className="input-group-prepend">
                 <span className="input-group-text">На странице</span>

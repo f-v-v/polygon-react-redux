@@ -98,7 +98,6 @@ const filmError = (error) => {
 }
 
 const getFilm = (id) => (dispatch) =>  {
-    // debugger
     dispatch(filmRequested());
     return apiFilm.fetchFilmById(id).then(
         (film) => dispatch(filmLoaded(film)), 
@@ -107,7 +106,6 @@ const getFilm = (id) => (dispatch) =>  {
 };
 
 const getRelationPlanets = (arr) => (dispatch) =>  {
-    // debugger
     dispatch(relationPlanetRequested());
     return apiPlanet.fetchPlanetByArrayId(arr, false).then(
         (relationPlanet) => dispatch(relationPlanetLoaded(relationPlanet)), 
@@ -124,12 +122,10 @@ const getFilmAndRelation = () => (dispatch, getState) => {
             return dispatch(getRelationPlanets(planets));
         }
     })
-    // .then(() => console.log(getState().filmsPage));
 }
 
 
 export const getAllFilms = () => (dispatch, getState) => {
-    // debugger;
     dispatch(allFilmsRequested());
     apiFilm.fetchAllFilms().then (
         ({allFilms}) => dispatch(allFilmsLoaded(allFilms)), 

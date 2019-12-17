@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
-import {getAllStarships} from '../../actions/starships';
+import {getAllStarships, setServerSearch} from '../../actions/starships';
 import StarshipsGrid from './starships-page-component/starship-grid';
 import StarshipPagination from './starships-page-component/starship-pagination';
+import StarshipServerSearchPanel from './starships-page-component/starhip-server-search-panel'
 
 // import './starships-page.css';
 
@@ -15,14 +16,16 @@ class StarshipsPage extends Component {
     
     // 2. Возможно ли(по практикам) сделать запрос на получение данных в shouldComponentUpdate???
     componentDidMount = () => {
+        const search = this.props.search ? this.props.search:'';
+        console.log('from didmount', search);
+        this.props.setServerSearch(search);
         this.props.getAllStarships(this.props.page);
-        // this.props.getAllStarships();
     }
     
     componentDidUpdate= (prevProps, prevState, snapshot) => {
-        // console.log(`FromDidUpdate prevProps.Page=${prevProps.page}`);
-        // console.log(`FromDidUpdate current=${this.props.page}`);
-        if (prevProps.page !== this.props.page) {
+        const search = this.props.search ? this.props.search:'';
+        if ((prevProps.page !== this.props.page) || (prevProps.search !== this.props.search)) {
+            this.props.setServerSearch(search);
             this.props.getAllStarships(this.props.page);
         }
     }
@@ -40,9 +43,7 @@ class StarshipsPage extends Component {
     // }
 
     render() {
-        const {isLoading, isError, page } = this.props;
-        //, page, search
-        // debugger
+        const {isLoading, isError, page, search } = this.props;
         if (isLoading) {
             return <Spinner />
         }
@@ -51,19 +52,14 @@ class StarshipsPage extends Component {
             return <ErrorIndicator error={isError} />
         }
 
+        const searchIn = search ? search:'';
         return (
-
             <div>
-                {/* <div className="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                    <StarshipSortPanel />
-                    <StarshipInnerSearchPanel />
-                    <StarshipServerSearchPanel />
+                <div className="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                    <StarshipServerSearchPanel  search={searchIn}/>
                 </div>
                 <StarshipsGrid />
-                <StarshipPagination /> */}
-                <StarshipsGrid />
-                <StarshipPagination currentPage={page}/>
-                {/* <PaginationLink currentPage={page}/> */}
+                <StarshipPagination currentPage={page} search={searchIn}/>
             </div>
         )
     };
@@ -80,6 +76,8 @@ const mapStateToProps = ({starshipsPage:{isLoading, isError, starships}}) => {
 };
 const mapDispatchToProps = {
     getAllStarships,
+    setServerSearch
+
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(StarshipsPage);
