@@ -40,7 +40,7 @@ export default class planetsApi extends baseSWApiService {
         const fn = short?this._transformDataShort:this._transformData;
         return {
             allPlanets:arr.map(fn),
-            tottalPlanets:data.count
+            totalPlanets:data.count
             }
 
     }

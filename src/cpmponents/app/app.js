@@ -2,7 +2,7 @@ import React from 'react';
 import './app.css';
 import Header from '../header';
 import {Route, Switch} from 'react-router-dom';
-import {FilmsPage, CharactersPage, PlanetsPage} from '../pages'
+import {FilmsPage, CharactersPage, PlanetsPage, StarshipsPage} from '../pages'
 
 function App() {
 
@@ -14,11 +14,12 @@ function App() {
         <Route path="/films" component={FilmsPage} />
         <Route path="/characters" component={CharactersPage} />
         {/* <Route path="/characters/:page?" component={CharactersPage} /> */}
-        {/* <Route path="/characters/:page?" 
+        <Route path="/starships/:page/:search?" 
               render={({match})=>{
-                const {page} = match.params;
-                console.dir(`fromApp page=${page}`)
-              return <CharactersPage page={page}/>}} /> */}
+                const {page, search} = match.params;
+                console.dir(`fromApp page=${page} search=${search}`)
+              return <StarshipsPage page={page} search={search}/>}} />
+        {/* <Route path="/starships" component={StarshipsPage} /> */}
         <Route path="/planets" component={PlanetsPage} />
         <Route render={() => <h2>Page not found</h2>} /> 
       </Switch>

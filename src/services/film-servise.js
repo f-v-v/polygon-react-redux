@@ -39,7 +39,7 @@ export default class filmsApi extends baseSWApiService {
         const fn = short?this._transformDataShort:this._transformData;
         return {
             allFilms:arr.map(fn),
-            tottalFilms:data.count
+            totalFilms:data.count
             }
 
     }

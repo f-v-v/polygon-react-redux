@@ -2,6 +2,13 @@ import React from 'react';
 import GridCards from '../../grid-cards';
 import { connect } from 'react-redux';
 
+const mapFields = [
+    {field:"gender", label:"Gender: "},
+    {field:"birthYear", label:"birth Year: "},
+    {field:"height", label:"Height: "},
+    {field:"mass", label:"Mass: "},
+]
+
 const compareName = (a, b) => {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
@@ -60,7 +67,7 @@ const CharactersGrid = (props) => {
     const {characters} = props;
     return (
         <div className="">
-            <GridCards items={characters}/>
+            <GridCards items={characters} mapFields={mapFields}/>
         </div>
     )
 }

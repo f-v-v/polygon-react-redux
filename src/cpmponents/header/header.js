@@ -13,6 +13,9 @@ const Header = () => {
                     <Link to="/characters/">PEOPLE</Link>     
                 </li>
                 <li>
+                    <Link to="/starships/1">STARSHIPS</Link>     
+                </li>
+                <li>
                     <Link to="/planets">PLANETS</Link>     
                 </li>
             </ul>

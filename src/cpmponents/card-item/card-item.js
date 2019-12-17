@@ -4,7 +4,13 @@ import Card3d from '../card-3d';
 
 import  './card-item.css'
 
-const  CardItem = ({item}) => {
+const  CardItem = ({item, mapFields}) => {
+    const fields = mapFields.map((item) =>{
+        return (
+            <Record field={item.field} label={item.label} key={item.field}/>
+        )
+    })
+
     const front = (
         <img src={item.img} alt={item.name}/>
     );
@@ -12,11 +18,11 @@ const  CardItem = ({item}) => {
         <Details name={item.name} 
                 item = {item}
         >
-            <Record field="gender" label="Gender: "/>
+            {/* <Record field="gender" label="Gender: "/>
             <Record field="birthYear" label="birth Year: "/>
             <Record field="height" label="Height: "/>
-            <Record field="mass" label="Mass: "/>
-            
+            <Record field="mass" label="Mass: "/> */}
+            {fields}
         </Details>
     );
     return (

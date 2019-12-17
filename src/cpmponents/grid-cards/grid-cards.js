@@ -1,11 +1,11 @@
 import React from 'react';
 import CardItem from '../card-item';
 
-const GridCards = ({items}) => {
+const GridCards = ({items, mapFields}) => {
 
     const grid = items.map( item => {
         return (
-            <CardItem item={item} key={item.id} />
+            <CardItem item={item} mapFields={mapFields} key={item.id} />
         );
     })
     return (
