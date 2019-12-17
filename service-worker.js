@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/polygon-react-redux/precache-manifest.e199b1d6d4db930d42c14c144a33df96.js"
+  "/polygon-react-redux/precache-manifest.d4c4dffdd8028886356c833a50f77aab.js"
 );
 
 self.addEventListener('message', (event) => {

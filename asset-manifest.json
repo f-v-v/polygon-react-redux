@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/polygon-react-redux/static/css/main.52077399.chunk.css",
-    "main.js": "/polygon-react-redux/static/js/main.dcc3c3c5.chunk.js",
-    "main.js.map": "/polygon-react-redux/static/js/main.dcc3c3c5.chunk.js.map",
+    "main.js": "/polygon-react-redux/static/js/main.b774af58.chunk.js",
+    "main.js.map": "/polygon-react-redux/static/js/main.b774af58.chunk.js.map",
     "runtime-main.js": "/polygon-react-redux/static/js/runtime-main.0d02a4ab.js",
     "runtime-main.js.map": "/polygon-react-redux/static/js/runtime-main.0d02a4ab.js.map",
     "static/js/2.cd45f755.chunk.js": "/polygon-react-redux/static/js/2.cd45f755.chunk.js",
     "static/js/2.cd45f755.chunk.js.map": "/polygon-react-redux/static/js/2.cd45f755.chunk.js.map",
     "index.html": "/polygon-react-redux/index.html",
-    "precache-manifest.e199b1d6d4db930d42c14c144a33df96.js": "/polygon-react-redux/precache-manifest.e199b1d6d4db930d42c14c144a33df96.js",
+    "precache-manifest.d4c4dffdd8028886356c833a50f77aab.js": "/polygon-react-redux/precache-manifest.d4c4dffdd8028886356c833a50f77aab.js",
     "service-worker.js": "/polygon-react-redux/service-worker.js",
     "static/css/main.52077399.chunk.css.map": "/polygon-react-redux/static/css/main.52077399.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.0d02a4ab.js",
     "static/js/2.cd45f755.chunk.js",
     "static/css/main.52077399.chunk.css",
-    "static/js/main.dcc3c3c5.chunk.js"
+    "static/js/main.b774af58.chunk.js"
   ]
 }

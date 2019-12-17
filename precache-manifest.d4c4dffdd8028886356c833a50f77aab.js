@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0443a6c3d32fc5dd5d22903bbfe57a3",
+    "revision": "56b715f587cf5595cc8549bd60d400bf",
     "url": "/polygon-react-redux/index.html"
   },
   {
-    "revision": "348ee52ca5af0359cfc4",
+    "revision": "45caf5d9eddaf7a06ddc",
     "url": "/polygon-react-redux/static/css/main.52077399.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/polygon-react-redux/static/js/2.cd45f755.chunk.js"
   },
   {
-    "revision": "348ee52ca5af0359cfc4",
-    "url": "/polygon-react-redux/static/js/main.dcc3c3c5.chunk.js"
+    "revision": "45caf5d9eddaf7a06ddc",
+    "url": "/polygon-react-redux/static/js/main.b774af58.chunk.js"
   },
   {
     "revision": "937f094512489dbc63ad",
